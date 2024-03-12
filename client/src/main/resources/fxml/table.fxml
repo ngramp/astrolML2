@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<fx:root xmlns:fx="http://javafx.com/fxml/1" type="javafx.scene.control.TableView" xmlns="http://javafx.com/javafx/8">
+    <columns>
+        <TableColumn fx:id="run" prefWidth="92.0" text="Run"/>
+        <TableColumn fx:id="rerun" prefWidth="92.0" text="Rerun"/>
+        <TableColumn fx:id="camcol" prefWidth="108.0" text="CamCol"/>
+        <TableColumn fx:id="field" prefWidth="108.0" text="Field"/>
+        <TableColumn fx:id="id" prefWidth="108.0" text="Id"/>
+    </columns>
+</fx:root>

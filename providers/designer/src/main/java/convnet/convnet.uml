@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="688.0416666666666" y="140.5">model.convnet.CostLayer</node>
+    <node x="0.0" y="292.0">model.convnet.LocalContrastNormalisationLayer</node>
+    <node x="1519.2916666666665" y="140.5">model.convnet.ElementwiseLayer</node>
+    <node x="172.29166666666663" y="109.0">model.convnet.NormalisationLayer</node>
+    <node x="1328.25" y="506.5">model.convnet.FullyConnectedLayer</node>
+    <node x="1057.75" y="658.0">model.convnet.ConvolutionalLayer</node>
+    <node x="1605.0" y="313.0">model.convnet.ElementwiseMaxLayer</node>
+    <node x="257.0" y="313.0">model.convnet.LocalResponseNormalisationLayer</node>
+    <node x="1682.2916666666665" y="140.5">model.convnet.SoftmaxLayer</node>
+    <node x="522.0" y="313.0">model.convnet.LogisticRegressionCostLayer</node>
+    <node x="454.54166666666663" y="140.5">model.convnet.DataLayer</node>
+    <node x="752.0" y="313.0">model.convnet.SumOfSquaresCostLayer</node>
+    <node x="957.0" y="250.0">model.convnet.LocalPoolingLayer</node>
+    <node x="0.0" y="836.0">model.convnet.Neuron</node>
+    <node x="1079.25" y="454.0">model.convnet.LocallyConnectedLayer</node>
+    <node x="896.75" y="0.0">model.convnet.Layer</node>
+    <node x="1406.0" y="302.5">model.convnet.ElementwiseSumLayer</node>
+    <node x="1216.0" y="302.5">model.convnet.WeightedNeuronLayer</node>
+    <node x="1114.0416666666665" y="130.0">model.convnet.NeuronLayer</node>
+    <node x="123.0" y="836.0">model.convnet.Pool</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="model.convnet.NormalisationLayer" target="model.convnet.Layer">
+      <point x="0.0" y="-45.5" />
+      <point x="247.79166666666663" y="69.0" />
+      <point x="906.8333333333333" y="69.0" />
+      <point x="-50.41666666666667" y="24.5" />
+    </edge>
+    <edge source="model.convnet.DataLayer" target="model.convnet.Layer">
+      <point x="0.0" y="-14.0" />
+      <point x="502.04166666666663" y="79.0" />
+      <point x="927.0" y="79.0" />
+      <point x="-30.250000000000004" y="24.5" />
+    </edge>
+    <edge source="model.convnet.FullyConnectedLayer" target="model.convnet.WeightedNeuronLayer">
+      <point x="0.0" y="-24.5" />
+      <point x="1408.25" y="429.0" />
+      <point x="1343.5" y="429.0" />
+      <point x="42.5" y="24.5" />
+    </edge>
+    <edge source="model.convnet.NeuronLayer" target="model.convnet.Layer">
+      <point x="0.0" y="-24.5" />
+      <point x="1187.5416666666665" y="89.0" />
+      <point x="967.3333333333333" y="89.0" />
+      <point x="10.083333333333329" y="24.5" />
+    </edge>
+    <edge source="model.convnet.SoftmaxLayer" target="model.convnet.Layer">
+      <point x="0.0" y="-14.0" />
+      <point x="1739.7916666666665" y="69.0" />
+      <point x="1007.6666666666666" y="69.0" />
+      <point x="50.41666666666667" y="24.5" />
+    </edge>
+    <edge source="model.convnet.ConvolutionalLayer" target="model.convnet.LocallyConnectedLayer">
+      <point x="0.0" y="-66.5" />
+      <point x="0.0" y="77.0" />
+    </edge>
+    <edge source="model.convnet.ElementwiseSumLayer" target="model.convnet.ElementwiseLayer">
+      <point x="0.0" y="-24.5" />
+      <point x="1495.5" y="225.0" />
+      <point x="1555.0416666666665" y="225.0" />
+      <point x="-35.75" y="14.0" />
+    </edge>
+    <edge source="model.convnet.LocalPoolingLayer" target="model.convnet.NeuronLayer">
+      <point x="0.0" y="-77.0" />
+      <point x="1076.5" y="225.0" />
+      <point x="1150.7916666666665" y="225.0" />
+      <point x="-36.75" y="24.5" />
+    </edge>
+    <edge source="model.convnet.LocallyConnectedLayer" target="model.convnet.WeightedNeuronLayer">
+      <point x="0.0" y="-77.0" />
+      <point x="1193.75" y="429.0" />
+      <point x="1258.5" y="429.0" />
+      <point x="-42.5" y="24.5" />
+    </edge>
+    <edge source="model.convnet.LocalResponseNormalisationLayer" target="model.convnet.NormalisationLayer">
+      <point x="0.0" y="-14.0" />
+      <point x="379.5" y="225.0" />
+      <point x="285.54166666666663" y="225.0" />
+      <point x="37.75" y="45.5" />
+    </edge>
+    <edge source="model.convnet.ElementwiseLayer" target="model.convnet.Layer">
+      <point x="0.0" y="-14.0" />
+      <point x="1590.7916666666665" y="79.0" />
+      <point x="987.5" y="79.0" />
+      <point x="30.25" y="24.5" />
+    </edge>
+    <edge source="model.convnet.CostLayer" target="model.convnet.Layer">
+      <point x="0.0" y="-14.0" />
+      <point x="734.5416666666666" y="89.0" />
+      <point x="947.1666666666666" y="89.0" />
+      <point x="-10.083333333333336" y="24.5" />
+    </edge>
+    <edge source="model.convnet.LocalContrastNormalisationLayer" target="model.convnet.NormalisationLayer">
+      <point x="0.0" y="-35.0" />
+      <point x="118.5" y="225.0" />
+      <point x="210.04166666666663" y="225.0" />
+      <point x="-37.75" y="45.5" />
+    </edge>
+    <edge source="model.convnet.LogisticRegressionCostLayer" target="model.convnet.CostLayer">
+      <point x="0.0" y="-14.0" />
+      <point x="627.0" y="225.0" />
+      <point x="711.2916666666666" y="225.0" />
+      <point x="-23.25" y="14.0" />
+    </edge>
+    <edge source="model.convnet.SumOfSquaresCostLayer" target="model.convnet.CostLayer">
+      <point x="0.0" y="-14.0" />
+      <point x="844.5" y="225.0" />
+      <point x="757.7916666666666" y="225.0" />
+      <point x="23.25" y="14.0" />
+    </edge>
+    <edge source="model.convnet.ElementwiseMaxLayer" target="model.convnet.ElementwiseLayer">
+      <point x="0.0" y="-14.0" />
+      <point x="1688.5" y="225.0" />
+      <point x="1626.5416666666665" y="225.0" />
+      <point x="35.75" y="14.0" />
+    </edge>
+    <edge source="model.convnet.WeightedNeuronLayer" target="model.convnet.NeuronLayer">
+      <point x="0.0" y="-24.5" />
+      <point x="1301.0" y="225.0" />
+      <point x="1224.2916666666665" y="225.0" />
+      <point x="36.75" y="24.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="1063.5" y="204.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

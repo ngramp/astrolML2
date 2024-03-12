@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+         <!--Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="hibernate.connection.username">project</property>
+        <property name="hibernate.connection.password">c0ldfury</property>
+        <!--<property name="hibernate.default_schema">public</property>-->
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+
+        <!--<property name="connection.driver_class">org.hsqldb.jdbcDriver</property>-->
+        <!--<property name="connection.url">jdbc:hsqldb:file:data</property>-->
+        <!--<property name="hibernate.connection.username"></property>-->
+        <!--<property name="hibernate.connection.password"></property>-->
+
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">10</property>
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">false</property>
+
+        <!-- Table mappings -->
+        <mapping class="model.datasourcesold.GzData"/>
+        <mapping resource="data/GzData.hbm.xml"/>
+        <mapping class="model.datasourcesold.Dr12"/>
+        <mapping resource="data/Dr12.hbm.xml"/>
+        <mapping class="model.datasourcesold.Dr7Gz"/>
+        <mapping resource="data/Dr7Gz.hbm.xml"/>
+        <mapping class="sas.persist.CalibobjgalaxyId"/>
+        <mapping class="sas.persist.CalibobjstarId"/>
+        <mapping class="sas.persist.CalibobjskyId"/>
+        <mapping class="sas.persist.DataSweepStarId"/>
+        <mapping class="sas.persist.DataSweepGalId"/>
+        <mapping class="sas.persist.DataSweepSkyId"/>
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="app" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8" fx:controller="AppControllerV2">
+    <top>
+        <MenuBar xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+            <menus>
+                <Menu mnemonicParsing="false" text="Project">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Preferences"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox prefWidth="200.0">
+            <children>
+                <TitledPane fx:id="dsPane" collapsible="false" text="Data Sources"/>
+                <TitledPane fx:id="cvPane" collapsible="false" text="DL Network Setup"/>
+                <TitledPane fx:id="trPane" collapsible="false" text="Training"/>
+            </children>
+        </VBox>
+
+    </left>
+    <center>
+        <StackPane>
+            <children>
+                <TabPane fx:id="content" maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="ALL_TABS">
+                    <tabs>
+                        <Tab text="Introduction" />
+                    </tabs>
+                    <rotationAxis>
+                        <Point3D />
+                    </rotationAxis>
+                </TabPane>
+            </children>
+        </StackPane>
+    </center>
+    <right>
+
+    </right>
+    <bottom>
+        <ToolBar fx:id="statusbar" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <HBox alignment="BOTTOM_RIGHT"/>
+            </items>
+        </ToolBar>
+    </bottom>
+</BorderPane>

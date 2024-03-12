@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="app" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppController">
+    <top>
+        <MenuBar xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <menus>
+                <Menu mnemonicParsing="false" text="Project">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Preferences" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <StackPane prefHeight="541.0" prefWidth="550.0">
+            <children>
+                <TabPane fx:id="content" maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="ALL_TABS">
+                    <tabs>
+                        <Tab text="Introduction">
+                     <content>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Welcome to AstroML" underline="true" wrapText="true" />
+                              <Label prefHeight="61.0" prefWidth="467.0" text="This application is designed to support multiple data processing pipelines for use training machine learning algorithms." wrapText="true" />
+                              <VBox prefHeight="65.0" prefWidth="560.0">
+                                 <children>
+                                    <Label prefHeight="41.0" prefWidth="366.0" text="Object data -&gt; Image data -&gt; Image processor " wrapText="true" />
+                                    <Label text="            -&gt; Neural network -&gt; Training" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </VBox>
+                              <Label prefHeight="61.0" prefWidth="467.0" text="Plugins can be selected from the menu and configured using their control panels." wrapText="true" />
+                              <HBox spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="92.0" fitWidth="200.0">
+                                       <image>
+                                          <Image url="/fxml/Spectacle.k15899.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView>
+                                       <image>
+                                          <Image url="/fxml/Spectacle.i15899.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Label prefHeight="61.0" prefWidth="467.0" text="The application can be extended by adding plugins to the plugin directory." wrapText="true" />
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </VBox>
+                     </content></Tab>
+                    </tabs>
+                    <rotationAxis>
+                        <Point3D />
+                    </rotationAxis>
+                </TabPane>
+            </children>
+        </StackPane>
+    </center>
+    <right>
+
+    </right>
+    <bottom>
+        <ToolBar fx:id="statusbar" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <HBox alignment="BOTTOM_RIGHT" />
+            </items>
+        </ToolBar>
+    </bottom>
+   <left>
+      <TitledPane collapsible="false" maxHeight="1.7976931348623157E308" text="Available plugins" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <content>
+            <VBox maxHeight="1.7976931348623157E308" prefWidth="206.0" spacing="10.0">
+               <children>
+                  <VBox spacing="5.0" styleClass="plugin" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Object data" underline="true" VBox.vgrow="NEVER" />
+                        <HBox spacing="5.0" VBox.vgrow="NEVER">
+                           <children>
+                              <ChoiceBox fx:id="objectDataChoice" prefWidth="150.0" />
+                              <Button fx:id="openObjectData" mnemonicParsing="false" text="➤" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="odDesc" wrapText="true" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" styleClass="plugin" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Image data" underline="true" VBox.vgrow="NEVER" />
+                        <HBox spacing="5.0" VBox.vgrow="NEVER">
+                           <children>
+                              <ChoiceBox fx:id="imageDataChoice" prefWidth="150.0" />
+                              <Button fx:id="openImageData" mnemonicParsing="false" text="➤" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="idDesc" wrapText="true" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" styleClass="plugin" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Image processor" underline="true" VBox.vgrow="NEVER" />
+                        <HBox spacing="5.0" VBox.vgrow="NEVER">
+                           <children>
+                              <ChoiceBox fx:id="imageProcessorChoice" prefWidth="150.0" />
+                              <Button fx:id="openImageProcessor" mnemonicParsing="false" text="➤" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="ipDesc" wrapText="true" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" styleClass="plugin" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Neural network" underline="true" VBox.vgrow="NEVER" />
+                        <HBox spacing="5.0" VBox.vgrow="NEVER">
+                           <children>
+                              <ChoiceBox fx:id="nnChoice" prefWidth="150.0" />
+                              <Button fx:id="openNN" mnemonicParsing="false" text="➤" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="nnDesc" wrapText="true" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0" styleClass="plugin" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Training" underline="true" VBox.vgrow="NEVER" />
+                        <HBox spacing="5.0" VBox.vgrow="NEVER">
+                           <children>
+                              <ChoiceBox fx:id="trainingChoice" prefWidth="150.0" />
+                              <Button fx:id="openTraining" mnemonicParsing="false" text="➤" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="trDesc" wrapText="true" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </content>
+      </TitledPane>
+   </left>
+</BorderPane>

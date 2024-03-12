@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.datasourcesold.GzData" table="GZData" schema="PUBLIC" catalog="PUBLIC">
+        <id name="objid">
+            <column name="OBJID" sql-type="bigint(64)"/>
+        </id>
+        <property name="ra">
+            <column name="ra" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="decl">
+            <column name="DECL" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="nvoteTot">
+            <column name="NVOTE_TOT" sql-type="smallint(16)" not-null="true"/>
+        </property>
+        <property name="nvoteStd">
+            <column name="NVOTE_STD" sql-type="tinyint(8)" not-null="true"/>
+        </property>
+        <property name="nvoteMr1">
+            <column name="NVOTE_MR1" sql-type="tinyint(8)" not-null="true"/>
+        </property>
+        <property name="nvoteMr2">
+            <column name="NVOTE_MR2" sql-type="smallint(16)" not-null="true"/>
+        </property>
+        <property name="nvoteMon">
+            <column name="NVOTE_MON" sql-type="tinyint(8)" not-null="true"/>
+        </property>
+        <property name="pEl">
+            <column name="P_EL" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="pCw">
+            <column name="P_CW" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="pAcw">
+            <column name="P_ACW" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="pEdge">
+            <column name="P_EDGE" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="pDk">
+            <column name="P_DK" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="pMg">
+            <column name="P_MG" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+        <property name="pCs">
+            <column name="P_CS" sql-type="double(64)" precision="64" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

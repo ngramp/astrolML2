@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-Jun-2016 10:09:16 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="sas.persist.Datasweepindex" table="datasweepindex" schema="public" optimistic-lock="version">
+        <composite-id name="id" class="model.persist.DataSweepSkyId">
+            <key-property name="run" type="int">
+                <column name="run" />
+            </key-property>
+            <key-property name="rerun" type="string">
+                <column name="rerun" />
+            </key-property>
+            <key-property name="camcol" type="int">
+                <column name="camcol" />
+            </key-property>
+            <key-property name="field" type="int">
+                <column name="field" />
+            </key-property>
+        </composite-id>
+        <property name="ra" type="java.lang.Double">
+            <column name="ra" precision="17" scale="17" />
+        </property>
+        <property name="dec" type="java.lang.Double">
+            <column name="dec" precision="17" scale="17" />
+        </property>
+        <property name="istart" type="java.lang.Integer">
+            <column name="istart" />
+        </property>
+        <property name="iend" type="java.lang.Integer">
+            <column name="iend" />
+        </property>
+        <property name="nprimary" type="java.lang.Integer">
+            <column name="nprimary" />
+        </property>
+    </class>
+</hibernate-mapping>

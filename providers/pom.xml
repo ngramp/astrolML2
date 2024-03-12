@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <MyDir>/home/gram/Code/IdeaProjects/astroML/plugins/</MyDir>
+    </properties>
+    <parent>
+        <artifactId>astroML</artifactId>
+        <groupId>devlp</groupId>
+        <version>0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <version>0.1</version>
+    <artifactId>providers</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>photoobj</module>
+        <module>photosweep</module>
+        <module>galaxyzoo</module>
+        <module>kaggle</module>
+        <module>kaggleimages</module>
+        <module>casjobsdr7</module>
+        <module>dieleman-neural-net</module>
+        <module>designer</module>
+        <module>nullImageProcessor</module>
+        <module>gctraining</module>
+        <module>dieleman-image-processor</module>
+    </modules>
+
+
+</project>

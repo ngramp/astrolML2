@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" type="javafx.scene.layout.StackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+        <SplitPane dividerPositions="0.7789968652037618" maxHeight="Infinity" maxWidth="Infinity">
+            <items>
+                <StackPane fx:id="canvasArea" maxHeight="Infinity" maxWidth="Infinity" />
+                <Accordion prefWidth="200.0">
+                    <panes>
+                        <TitledPane fx:id="neurPane" animated="false" text="Neuron Layers">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="normPane" animated="false" text="Normalisation Layers">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </TitledPane>
+                        <TitledPane fx:id="costPane" animated="false" text="Cost Layers">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+            </items>
+        </SplitPane>
+    </children>
+</fx:root>

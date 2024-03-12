@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-Jun-2016 10:09:16 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="model.persist.Calibobjsky" table="calibobjsky" schema="public" optimistic-lock="version">
+        <composite-id name="id" class="model.persist.CalibobjskyId">
+            <key-property name="run" type="short">
+                <column name="run" />
+            </key-property>
+            <key-property name="rerun" type="string">
+                <column name="rerun" />
+            </key-property>
+            <key-property name="camcol" type="int">
+                <column name="camcol" />
+            </key-property>
+            <key-property name="field" type="short">
+                <column name="field" />
+            </key-property>
+            <key-property name="id" type="short">
+                <column name="id" />
+            </key-property>
+        </composite-id>
+        <property name="objcType" type="java.lang.Integer">
+            <column name="objc_type" />
+        </property>
+        <property name="objcFlags" type="java.lang.Integer">
+            <column name="objc_flags" />
+        </property>
+        <property name="objcFlags2" type="java.lang.Integer">
+            <column name="objc_flags2" />
+        </property>
+        <property name="objcRowc" type="java.lang.Float">
+            <column name="objc_rowc" precision="8" scale="8" />
+        </property>
+        <property name="rowc" type="float[]">
+            <column name="rowc" />
+        </property>
+        <property name="colc" type="float[]">
+            <column name="colc" />
+        </property>
+        <property name="flags" type="float[]">
+            <column name="flags" />
+        </property>
+        <property name="flags2" type="float[]">
+            <column name="flags2" />
+        </property>
+        <property name="pspStatus" type="float[]">
+            <column name="psp_status" />
+        </property>
+        <property name="ra" type="java.lang.Double">
+            <column name="ra" precision="17" scale="17" />
+        </property>
+        <property name="dec" type="java.lang.Double">
+            <column name="dec" precision="17" scale="17" />
+        </property>
+        <property name="psfFwhm" type="float[]">
+            <column name="psf_fwhm" />
+        </property>
+        <property name="extinction" type="float[]">
+            <column name="extinction" />
+        </property>
+        <property name="calibStatus" type="float[]">
+            <column name="calib_status" />
+        </property>
+        <property name="nmgypercount" type="float[]">
+            <column name="nmgypercount" />
+        </property>
+        <property name="resolveStatus" type="java.lang.Integer">
+            <column name="resolve_status" />
+        </property>
+        <property name="thingId" type="java.lang.Integer">
+            <column name="thing_id" />
+        </property>
+        <property name="ifield" type="java.lang.Integer">
+            <column name="ifield" />
+        </property>
+        <property name="balkanId" type="java.lang.Integer">
+            <column name="balkan_id" />
+        </property>
+        <property name="ndetect" type="java.lang.Integer">
+            <column name="ndetect" />
+        </property>
+    </class>
+</hibernate-mapping>

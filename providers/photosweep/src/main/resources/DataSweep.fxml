@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root fx:id="objectData" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" type="StackPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <Accordion maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefWidth="250.0" HBox.hgrow="NEVER">
+              <panes>
+                  <TitledPane maxHeight="1.7976931348623157E308" text="Object Types">
+                     <content>
+                        <VBox fx:id="objTypes" spacing="10.0">
+                                <children>
+                                    <RadioButton fx:id="galaxy" mnemonicParsing="false" text="Galaxies" />
+                                    <RadioButton fx:id="star" mnemonicParsing="false" text="Stars" />
+                                    <RadioButton fx:id="sky" mnemonicParsing="false" text="Sky" />
+                                </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                   <TitledPane expanded="false" text="Thresholds">
+                     <content>
+                        <VBox fx:id="thresholds">
+                           <children>
+                                <Label text="Quality:" />
+                              <HBox spacing="10.0">
+                                   <children>
+                                      <Slider fx:id="qualitySlider" prefHeight="16.0" prefWidth="194.0" />
+                                      <Label fx:id="qualint" />
+                                   </children>
+                                </HBox>
+                                <Label text="Min Petro:" />
+                                <HBox spacing="10.0">
+                                   <children>
+                                      <Slider fx:id="petroSlider" prefHeight="16.0" prefWidth="194.0" />
+                                      <Label fx:id="petroint" />
+                                   </children>
+                                </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                <TitledPane expanded="false" text="Flags1">
+                     <content>
+                        <VBox fx:id="flags1">
+                           <children>
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane expanded="false" text="Flags2">
+                     <content>
+                        <VBox fx:id="flags2">
+                           <children>
+
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                  <TitledPane expanded="false" text="Resolve Status">
+                     <content>
+                        <VBox fx:id="resolveStatus">
+                           <children>
+
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane expanded="false" text="Calibration Status">
+                     <content>
+                        <VBox fx:id="calibStatus">
+                           <children>
+
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+              </panes>
+            </Accordion>
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+               <children>
+                   <ScrollPane fx:id="previewContainer" fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefViewportHeight="600.0" prefViewportWidth="500.0" VBox.vgrow="ALWAYS" />
+                  <ToolBar maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
+                     <items>
+                        <Label fx:id="message" prefHeight="15.0" prefWidth="438.0" />
+                        <ProgressBar fx:id="previewProgress" prefWidth="200.0" progress="0.0" />
+                        <Button fx:id="previewButton" mnemonicParsing="false" text="Preview" />
+                     </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</fx:root>

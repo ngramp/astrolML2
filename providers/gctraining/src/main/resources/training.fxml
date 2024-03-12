@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root type="StackPane" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+            <bottom>
+                <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <items>
+                        <HBox prefHeight="28.0" prefWidth="871.0" spacing="5.0">
+                            <children>
+                                <Button fx:id="reset" mnemonicParsing="false" text="Reset" />
+                                <ProgressBar fx:id="totalProgress" maxWidth="1.7976931348623157E308" prefHeight="20.0" progress="0.0" HBox.hgrow="ALWAYS" />
+                                <Button fx:id="pause" mnemonicParsing="false" text="Pause" />
+                                <Button fx:id="train" mnemonicParsing="false" text="Train" />
+                            </children>
+                        </HBox>
+                    </items>
+                </ToolBar>
+            </bottom>
+            <center>
+                <StackPane>
+                    <children>
+                        <VBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" prefHeight="274.0" prefWidth="600.0" text="Output" VBox.vgrow="ALWAYS">
+                           <content>
+                              <TextArea fx:id="outputText" editable="false" prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                                </TitledPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</fx:root>

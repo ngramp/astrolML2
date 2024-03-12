@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-Jun-2016 10:09:16 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="model.persist.Calibobjstar" table="calibobjstar" schema="public" optimistic-lock="version">
+        <composite-id name="id" class="model.persist.CalibobjstarId">
+            <key-property name="run" type="short">
+                <column name="run" />
+            </key-property>
+            <key-property name="rerun" type="string">
+                <column name="rerun" />
+            </key-property>
+            <key-property name="camcol" type="int">
+                <column name="camcol" />
+            </key-property>
+            <key-property name="field" type="short">
+                <column name="field" />
+            </key-property>
+            <key-property name="id" type="short">
+                <column name="id" />
+            </key-property>
+        </composite-id>
+        <property name="objcType" type="java.lang.Integer">
+            <column name="objc_type" />
+        </property>
+        <property name="objcFlags" type="java.lang.Integer">
+            <column name="objc_flags" />
+        </property>
+        <property name="objcFlags2" type="java.lang.Integer">
+            <column name="objc_flags2" />
+        </property>
+        <property name="objcRowc" type="java.lang.Float">
+            <column name="objc_rowc" precision="8" scale="8" />
+        </property>
+        <property name="rowvdeg" type="java.lang.Float">
+            <column name="rowvdeg" precision="8" scale="8" />
+        </property>
+        <property name="rowvdegerr" type="java.lang.Float">
+            <column name="rowvdegerr" precision="8" scale="8" />
+        </property>
+        <property name="colvdeg" type="java.lang.Float">
+            <column name="colvdeg" precision="8" scale="8" />
+        </property>
+        <property name="colvdegerr" type="java.lang.Float">
+            <column name="colvdegerr" precision="8" scale="8" />
+        </property>
+        <property name="rowc" type="float[]">
+            <column name="rowc" />
+        </property>
+        <property name="colc" type="float[]">
+            <column name="colc" />
+        </property>
+        <property name="MRrCc" type="float[]">
+            <column name="m_rr_cc" />
+        </property>
+        <property name="MRrCcPsf" type="float[]">
+            <column name="m_rr_cc_psf" />
+        </property>
+        <property name="flags" type="float[]">
+            <column name="flags" />
+        </property>
+        <property name="flags2" type="float[]">
+            <column name="flags2" />
+        </property>
+        <property name="pspStatus" type="float[]">
+            <column name="psp_status" />
+        </property>
+        <property name="ra" type="java.lang.Double">
+            <column name="ra" precision="17" scale="17" />
+        </property>
+        <property name="dec" type="java.lang.Double">
+            <column name="dec" precision="17" scale="17" />
+        </property>
+        <property name="psfFwhm" type="float[]">
+            <column name="psf_fwhm" />
+        </property>
+        <property name="extinction" type="float[]">
+            <column name="extinction" />
+        </property>
+        <property name="skyflux" type="float[]">
+            <column name="skyflux" />
+        </property>
+        <property name="psfflux" type="float[]">
+            <column name="psfflux" />
+        </property>
+        <property name="psffluxIvar" type="float[]">
+            <column name="psfflux_ivar" />
+        </property>
+        <property name="fiberflux" type="float[]">
+            <column name="fiberflux" />
+        </property>
+        <property name="fiberfluxIvar" type="float[]">
+            <column name="fiberflux_ivar" />
+        </property>
+        <property name="fiber2flux" type="float[]">
+            <column name="fiber2flux" />
+        </property>
+        <property name="fiber2fluxIvar" type="float[]">
+            <column name="fiber2flux_ivar" />
+        </property>
+        <property name="modelflux" type="float[]">
+            <column name="modelflux" />
+        </property>
+        <property name="modelfluxIvar" type="float[]">
+            <column name="modelflux_ivar" />
+        </property>
+        <property name="calibStatus" type="float[]">
+            <column name="calib_status" />
+        </property>
+        <property name="nmgypercount" type="float[]">
+            <column name="nmgypercount" />
+        </property>
+        <property name="resolveStatus" type="java.lang.Integer">
+            <column name="resolve_status" />
+        </property>
+        <property name="thingId" type="java.lang.Integer">
+            <column name="thing_id" />
+        </property>
+        <property name="ifield" type="java.lang.Integer">
+            <column name="ifield" />
+        </property>
+        <property name="balkanId" type="java.lang.Integer">
+            <column name="balkan_id" />
+        </property>
+        <property name="ndetect" type="java.lang.Integer">
+            <column name="ndetect" />
+        </property>
+        <property name="pmMatch" type="java.lang.Integer">
+            <column name="pm_match" />
+        </property>
+        <property name="pmra" type="java.lang.Float">
+            <column name="pmra" precision="8" scale="8" />
+        </property>
+        <property name="pmdec" type="java.lang.Float">
+            <column name="pmdec" precision="8" scale="8" />
+        </property>
+        <property name="pmraerr" type="java.lang.Float">
+            <column name="pmraerr" precision="8" scale="8" />
+        </property>
+        <property name="pmdecerr" type="java.lang.Float">
+            <column name="pmdecerr" precision="8" scale="8" />
+        </property>
+        <property name="pmSigra" type="java.lang.Float">
+            <column name="pm_sigra" precision="8" scale="8" />
+        </property>
+        <property name="pmSigdec" type="java.lang.Float">
+            <column name="pm_sigdec" precision="8" scale="8" />
+        </property>
+        <property name="pmNfit" type="java.lang.Integer">
+            <column name="pm_nfit" />
+        </property>
+        <property name="pmDist22" type="java.lang.Float">
+            <column name="pm_dist22" precision="8" scale="8" />
+        </property>
+        <property name="tmassJ" type="java.lang.Float">
+            <column name="tmass_j" precision="8" scale="8" />
+        </property>
+        <property name="tmassJIvar" type="java.lang.Float">
+            <column name="tmass_j_ivar" precision="8" scale="8" />
+        </property>
+        <property name="tmassH" type="java.lang.Float">
+            <column name="tmass_h" precision="8" scale="8" />
+        </property>
+        <property name="tmassHIvar" type="java.lang.Float">
+            <column name="tmass_h_ivar" precision="8" scale="8" />
+        </property>
+        <property name="tmassK" type="java.lang.Float">
+            <column name="tmass_k" precision="8" scale="8" />
+        </property>
+        <property name="tmassKIvar" type="java.lang.Float">
+            <column name="tmass_k_ivar" precision="8" scale="8" />
+        </property>
+        <property name="tmassPhQual" type="string">
+            <column name="tmass_ph_qual" />
+        </property>
+        <property name="tmassRdFlg" type="java.lang.Short">
+            <column name="tmass_rd_flg" />
+        </property>
+        <property name="tmassBlFlg" type="java.lang.Short">
+            <column name="tmass_bl_flg" />
+        </property>
+        <property name="tmassCcFlg" type="string">
+            <column name="tmass_cc_flg" />
+        </property>
+        <property name="tmassGalContam" type="java.lang.Integer">
+            <column name="tmass_gal_contam" />
+        </property>
+        <property name="tmassMpFlg" type="java.lang.Integer">
+            <column name="tmass_mp_flg" />
+        </property>
+        <property name="tmassHemis" type="java.lang.Character">
+            <column name="tmass_hemis" length="1" />
+        </property>
+        <property name="tmassJdate" type="java.lang.Double">
+            <column name="tmass_jdate" precision="17" scale="17" />
+        </property>
+        <property name="aperflux6" type="float[]">
+            <column name="aperflux6" />
+        </property>
+        <property name="zhedflag" type="java.lang.Short">
+            <column name="zhedflag" />
+        </property>
+        <property name="cmodelfluxClean" type="float[]">
+            <column name="cmodelflux_clean" />
+        </property>
+        <property name="cmodelfluxCleanIvar" type="float[]">
+            <column name="cmodelflux_clean_ivar" />
+        </property>
+        <property name="cmodelfluxCleanVar" type="float[]">
+            <column name="cmodelflux_clean_var" />
+        </property>
+        <property name="cmodelfluxCleanChi2" type="float[]">
+            <column name="cmodelflux_clean_chi2" />
+        </property>
+        <property name="cmodelCleanNuse" type="float[]">
+            <column name="cmodel_clean_nuse" />
+        </property>
+        <property name="cmodelCleanMjdMaxdiff" type="float[]">
+            <column name="cmodel_clean_mjd_maxdiff" />
+        </property>
+        <property name="cmodelCleanMjdVar" type="float[]">
+            <column name="cmodel_clean_mjd_var" />
+        </property>
+        <property name="modelfluxClean" type="float[]">
+            <column name="modelflux_clean" />
+        </property>
+        <property name="modelfluxCleanIvar" type="float[]">
+            <column name="modelflux_clean_ivar" />
+        </property>
+        <property name="modelfluxCleanVar" type="float[]">
+            <column name="modelflux_clean_var" />
+        </property>
+        <property name="modelfluxCleanChi2" type="float[]">
+            <column name="modelflux_clean_chi2" />
+        </property>
+    </class>
+</hibernate-mapping>
